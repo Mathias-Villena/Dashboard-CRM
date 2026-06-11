@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: crm-backend-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    rootDir: backend
+    disk:
+      name: crm-db-disk
+      mountPath: /app/data
+      sizeGB: 1
+    envVars:
+      - key: GHL_ACCESS_TOKEN
+        sync: false  # Se solicitará ingresar este valor manualmente en la interfaz de Render
+      - key: GHL_LOCATION_ID
+        sync: false  # Se solicitará ingresar este valor manualmente en la interfaz de Render
+      - key: PIPELINE_ID
+        sync: false  # Se solicitará ingresar este valor manualmente en la interfaz de Render
+      - key: STAGE_ESPERANDO_WIN
+        value: fdc27149-b398-4ed7-9271-946c66dc9f0f
+      - key: STAGE_FICHA_DATOS_ENVIADA_WIN
+        value: 085ad64f-769b-42f7-986d-6eef802f0634
+      - key: STAGE_PENDIENTE_INICIO_HABILITACION
+        value: f251b78c-b57f-4cbd-aa61-3653b54c7677
+      - key: STAGE_EN_HABILITACION_TECNICA
+        value: 46400c15-10a3-4c96-a5b0-76f0cf65b753
+      - key: STAGE_HABILITACION_COMPLETA
+        value: dc5a218f-50a8-4bb6-9351-82b2f10d9886
