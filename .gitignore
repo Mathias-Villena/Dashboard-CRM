@@ -1,0 +1,48 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Python cache y bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+backend/__pycache__/
+
+# Base de datos SQLite y directorio de persistencia
+backend/data/
+
+# Archivos de configuración y variables de entorno sensibles (¡Nunca subir!)
+.env
+backend/.env
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Node.js dependencias, builds y caché
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+frontend/out/
+build/
+frontend/build/
+.turbo/
+frontend/.turbo/
+
+# Configuraciones de editores e IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
