@@ -33,9 +33,9 @@ def init_db():
     if count == 0:
         print("[DB] La base de datos está vacía. Insertando usuarios semilla...")
         seed_users = [
-            ("jefe_ti", "RomolJefe2026", "Jefe de TI", "Jefe_ti"),
-            ("josue", "RomolJosue2026", "Desarrollador TI 1", "Josue"),
-            ("colaborador", "RomolColab2026", "Desarrollador TI 2", "Colaborador")
+            ("humberto", "Humberto2026", "Jefe de TI", "Humberto"),
+            ("mathias", "Mathias2026", "Desarrollador TI 1", "Mathias"),
+            ("cesar", "Cesar2026", "Desarrollador TI 2", "Cesar")
         ]
         cursor.executemany("""
             INSERT INTO users (username, password, role, name)
